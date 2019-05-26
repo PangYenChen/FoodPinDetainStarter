@@ -24,7 +24,9 @@ class RestaurantDetailViewController: UIViewController {
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = !restaurant.isVisited
         
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
     
 
@@ -37,5 +39,48 @@ class RestaurantDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
+
+extension RestaurantDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            let identifier = String(describing: RestaurantDetailIconTextCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailIconTextCell
+            cell.iconImageView.image = UIImage(named: "phone")
+            cell.shortTextLabel.text = restaurant.phone
+            cell.selectionStyle = .none
+            
+            return cell
+            
+        case 1:
+            let identifier = String(describing: RestaurantDetailIconTextCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailIconTextCell
+            cell.iconImageView.image = UIImage(named: "map")
+            cell.shortTextLabel.text = restaurant.location
+            cell.selectionStyle = .none
+            
+            return cell
+        case 2:
+            let identifier = String(describing: RestaurantDetailTextCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailTextCell
+            cell.descriptionLabel.text = restaurant.description
+            cell.selectionStyle = .none
+            
+            return cell
+        default:
+            fatalError("failed to instantiate the table view cell for detail view controller")
+        }
+    }
+    
+    
+}
+
+extension RestaurantDetailViewController: UITableViewDelegate {
+    
+}
+

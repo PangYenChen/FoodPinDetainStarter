@@ -18,6 +18,8 @@
 		F216506D229993AC002AE6D5 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F216505422999381002AE6D5 /* Rubik-MediumItalic.ttf */; };
 		F216506E229993AC002AE6D5 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F216505222999381002AE6D5 /* Rubik-Regular.ttf */; };
 		F2165070229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216506F229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift */; };
+		F247733E229A6E9900B13801 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F247733D229A6E9900B13801 /* RestaurantDetailTextCell.swift */; };
+		F287995C229A6C7C0015138B /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287995B229A6C7C0015138B /* RestaurantDetailIconTextCell.swift */; };
 		F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44705AD211AF99E002E0327 /* AppDelegate.swift */; };
 		F44705B3211AF99E002E0327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44705B1211AF99E002E0327 /* Main.storyboard */; };
 		F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44705B4211AF99F002E0327 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		F216505922999381002AE6D5 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F216505A22999381002AE6D5 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		F216506F229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		F247733D229A6E9900B13801 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
+		F287995B229A6C7C0015138B /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		F44705AA211AF99E002E0327 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44705AD211AF99E002E0327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44705B2211AF99E002E0327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			children = (
 				F463DF77211D35A600F73F88 /* RestaurantTableViewCell.swift */,
 				F216506F229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift */,
+				F287995B229A6C7C0015138B /* RestaurantDetailIconTextCell.swift */,
+				F247733D229A6E9900B13801 /* RestaurantDetailTextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 				TargetAttributes = {
 					F44705A9211AF99E002E0327 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -237,8 +244,10 @@
 			files = (
 				F2165070229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift in Sources */,
 				F481ACB22123383100B6DC2F /* Restaurant.swift in Sources */,
+				F247733E229A6E9900B13801 /* RestaurantDetailTextCell.swift in Sources */,
 				F44705C0211AFFE1002E0327 /* RestaurantTableViewController.swift in Sources */,
 				F463DF78211D35A600F73F88 /* RestaurantTableViewCell.swift in Sources */,
+				F287995C229A6C7C0015138B /* RestaurantDetailIconTextCell.swift in Sources */,
 				F481ACB0212188AD00B6DC2F /* RestaurantDetailViewController.swift in Sources */,
 				F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */,
 			);
@@ -394,7 +403,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -411,7 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
