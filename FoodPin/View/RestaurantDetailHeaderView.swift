@@ -9,8 +9,8 @@
 import UIKit
 
 class RestaurantDetailHeaderView: UIView {
-    @IBOutlet var headerimageView: UIImageView!
-    @IBOutlet var nameLable: UILabel!
+    @IBOutlet var headerImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var typeLabel: UILabel! {
         didSet {
             typeLabel.layer.cornerRadius = 5

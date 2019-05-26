@@ -16,17 +16,26 @@ class RestaurantDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationItem.largeTitleDisplayMode = .never
-        
-        headerView.headerimageView.image = UIImage(named: restaurant.image)
-        headerView.nameLable.text = restaurant.name
+
+
+        headerView.headerImageView.image = UIImage(named: restaurant.image)
+        headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = !restaurant.isVisited
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+
+
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+
+
+        tableView.contentInsetAdjustmentBehavior = .never
     }
     
 
