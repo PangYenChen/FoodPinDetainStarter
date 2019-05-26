@@ -10,12 +10,21 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController {
     
+    @IBOutlet var headerView: RestaurantDetailHeaderView!
+    @IBOutlet var tableView: UITableView!
     var restaurant = Restaurant()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        
+        headerView.headerimageView.image = UIImage(named: restaurant.image)
+        headerView.nameLable.text = restaurant.name
+        headerView.typeLabel.text = restaurant.type
+        headerView.heartImageView.isHidden = !restaurant.isVisited
+        
+        
     }
     
 
