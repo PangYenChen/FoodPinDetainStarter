@@ -38,7 +38,18 @@ class RestaurantDetailViewController: UIViewController {
         tableView.contentInsetAdjustmentBehavior = .never
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
     /*
     // MARK: - Navigation
 
