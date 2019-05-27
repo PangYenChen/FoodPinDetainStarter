@@ -63,7 +63,7 @@ class RestaurantDetailViewController: UIViewController {
 
 extension RestaurantDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,6 +85,7 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+            
         case 2:
             let identifier = String(describing: RestaurantDetailTextCell.self)
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailTextCell
@@ -92,6 +93,22 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+            
+        case 3:
+            let identifier = String(describing: RestaurantDetailSeparatorCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailSeparatorCell
+            cell.titleLabel.text = "HOW TO GET THERE"
+            cell.selectionStyle = .none
+            
+            return cell
+            
+        case 4:
+            let identifier = String(describing: RestaurantDetailMapCell.self)
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailMapCell
+            cell.selectionStyle = .none
+            
+            return cell
+            
         default:
             fatalError("failed to instantiate the table view cell for detail view controller")
         }
