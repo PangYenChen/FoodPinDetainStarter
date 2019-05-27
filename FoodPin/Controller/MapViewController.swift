@@ -18,6 +18,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapView.delegate = self
+        
         //地址轉換成座標後 標記在地圖上
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(restaurant.location) { (placemarks, error) in
@@ -43,7 +45,26 @@ class MapViewController: UIViewController {
                 }
             }
         }
-
     }
+}
 
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "MyMarker"
+        
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
+        }
+        
+        //如果可以 則重複使用標記
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        }
+        
+        annotationView?.glyphText = "😀"
+        annotationView?.markerTintColor = .orange
+        
+        return annotationView
+    }
 }
