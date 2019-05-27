@@ -58,6 +58,9 @@ class RestaurantDetailViewController: UIViewController {
         if segue.identifier == "showMap" {
             let destination = segue.destination as! MapViewController
             destination.restaurant = restaurant
+        } else if segue.identifier == "showReview" {
+            let destination = segue.destination as! ReviewViewController
+            destination.restaurant = restaurant
         }
     }
     
