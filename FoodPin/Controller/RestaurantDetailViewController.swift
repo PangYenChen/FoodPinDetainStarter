@@ -50,15 +50,17 @@ class RestaurantDetailViewController: UIViewController {
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMap" {
+            let destination = segue.destination as! MapViewController
+            destination.restaurant = restaurant
+        }
     }
-    */
+    
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource {
@@ -106,6 +108,7 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             let identifier = String(describing: RestaurantDetailMapCell.self)
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailMapCell
             cell.selectionStyle = .none
+            cell.configure(location: restaurant.location)
             
             return cell
             

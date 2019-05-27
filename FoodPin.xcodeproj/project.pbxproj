@@ -18,6 +18,7 @@
 		F216506D229993AC002AE6D5 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F216505422999381002AE6D5 /* Rubik-MediumItalic.ttf */; };
 		F216506E229993AC002AE6D5 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F216505222999381002AE6D5 /* Rubik-Regular.ttf */; };
 		F2165070229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216506F229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift */; };
+		F240B99A229BDD03005C8C25 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240B999229BDD03005C8C25 /* MapViewController.swift */; };
 		F247733E229A6E9900B13801 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F247733D229A6E9900B13801 /* RestaurantDetailTextCell.swift */; };
 		F287995C229A6C7C0015138B /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F287995B229A6C7C0015138B /* RestaurantDetailIconTextCell.swift */; };
 		F2BA6737229BB5A200005CE4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA6736229BB5A200005CE4 /* UIColor+Extension.swift */; };
@@ -47,6 +48,7 @@
 		F216505922999381002AE6D5 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F216505A22999381002AE6D5 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		F216506F229A3DAE002AE6D5 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		F240B999229BDD03005C8C25 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F247733D229A6E9900B13801 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		F287995B229A6C7C0015138B /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		F2BA6736229BB5A200005CE4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				F44705BF211AFFE1002E0327 /* RestaurantTableViewController.swift */,
 				F481ACAF212188AD00B6DC2F /* RestaurantDetailViewController.swift */,
+				F240B999229BDD03005C8C25 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				F247733E229A6E9900B13801 /* RestaurantDetailTextCell.swift in Sources */,
 				F2BA6737229BB5A200005CE4 /* UIColor+Extension.swift in Sources */,
 				F44705C0211AFFE1002E0327 /* RestaurantTableViewController.swift in Sources */,
+				F240B99A229BDD03005C8C25 /* MapViewController.swift in Sources */,
 				F463DF78211D35A600F73F88 /* RestaurantTableViewCell.swift in Sources */,
 				F287995C229A6C7C0015138B /* RestaurantDetailIconTextCell.swift in Sources */,
 				F481ACB0212188AD00B6DC2F /* RestaurantDetailViewController.swift in Sources */,
