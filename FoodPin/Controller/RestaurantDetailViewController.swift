@@ -64,6 +64,9 @@ class RestaurantDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func close(segue: UIStoryboardSegue) {
+    }
+    
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource {

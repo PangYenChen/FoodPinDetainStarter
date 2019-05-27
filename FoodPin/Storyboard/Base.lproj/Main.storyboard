@@ -399,34 +399,37 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh2-bl-Cs6">
-                                <rect key="frame" x="365" y="44" width="33" height="32"/>
+                                <rect key="frame" x="382" y="44" width="16" height="22"/>
                                 <state key="normal" image="cross"/>
+                                <connections>
+                                    <segue destination="O3D-AB-czp" kind="unwind" unwindAction="closeWithSegue:" id="jCp-CM-vpe"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-dy-r8o">
-                                <rect key="frame" x="93.5" y="207.5" width="227" height="481"/>
+                                <rect key="frame" x="125" y="280.5" width="164" height="335"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-Rw-Wqe">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-En-dtA">
-                                        <rect key="frame" x="0.0" y="92" width="181" height="83"/>
+                                        <rect key="frame" x="0.0" y="69" width="121" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-7x-Vz1">
-                                        <rect key="frame" x="0.0" y="185" width="227" height="86"/>
+                                        <rect key="frame" x="0.0" y="138" width="164" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-hv-axf">
-                                        <rect key="frame" x="0.0" y="281" width="167" height="87"/>
+                                        <rect key="frame" x="0.0" y="207" width="105" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-Ut-7Qn">
-                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
+                                        <rect key="frame" x="0.0" y="276" width="147" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                     </button>
@@ -448,9 +451,15 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="sV5-ZU-zk3" id="RZV-ie-SgK"/>
+                        <outletCollection property="rateButtons" destination="5Yf-Rw-Wqe" collectionClass="NSMutableArray" id="d2F-Bj-egu"/>
+                        <outletCollection property="rateButtons" destination="ZhM-En-dtA" collectionClass="NSMutableArray" id="CAV-q9-OLH"/>
+                        <outletCollection property="rateButtons" destination="yEe-7x-Vz1" collectionClass="NSMutableArray" id="svf-mw-STC"/>
+                        <outletCollection property="rateButtons" destination="Me9-hv-axf" collectionClass="NSMutableArray" id="x22-Dk-FZZ"/>
+                        <outletCollection property="rateButtons" destination="Vv7-Ut-7Qn" collectionClass="NSMutableArray" id="bS7-vo-vcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CB4-2i-nJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="O3D-AB-czp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3061" y="547"/>
         </scene>
