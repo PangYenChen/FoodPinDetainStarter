@@ -15,6 +15,7 @@ class ReviewViewController: UIViewController {
     
     @IBOutlet var rateButtons: [UIButton]!
     
+    @IBOutlet weak var closeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundImageView.image = UIImage(named: restaurant.image)
@@ -26,27 +27,31 @@ class ReviewViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
         
         let moveRightTransform = CGAffineTransform(translationX: 600, y: 0)
+        let scaleUpTransform = CGAffineTransform(scaleX: 5, y: 5)
+        let moveScaleTransform = moveRightTransform.concatenating(scaleUpTransform)
         
         for button in rateButtons {
-            button.transform = moveRightTransform
+            button.transform = moveScaleTransform
             button.alpha = 0
-            print(button.frame, button.bounds)
         }
         
-        
+        let moveUpTransform = CGAffineTransform(translationX: 0, y: -100)
+        closeButton.transform = moveUpTransform
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         for index in 0..<rateButtons.count {
-            UIView.animate(withDuration: 4, delay: Double(index), options: [], animations: {
+            UIView.animate(withDuration: 5, delay: Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: [], animations: {
                 self.rateButtons[index].alpha = 1
                 self.rateButtons[index].transform = .identity
             }, completion: nil)
         }
         
-        
+        UIView.animate(withDuration: 5) {
+            self.closeButton.transform = .identity
+        }
     }
     
 
