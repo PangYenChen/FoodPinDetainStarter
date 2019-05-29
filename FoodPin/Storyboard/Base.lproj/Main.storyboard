@@ -415,17 +415,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh2-bl-Cs6">
-                                <rect key="frame" x="365" y="44" width="33" height="32"/>
+                                <rect key="frame" x="382" y="44" width="16" height="22"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
                                     <segue destination="O3D-AB-czp" kind="unwind" unwindAction="closeWithSegue:" id="jCp-CM-vpe"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-dy-r8o">
-                                <rect key="frame" x="93.5" y="207.5" width="227" height="481"/>
+                                <rect key="frame" x="125" y="280.5" width="164" height="335"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-Rw-Wqe">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -433,7 +433,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-En-dtA">
-                                        <rect key="frame" x="0.0" y="92" width="181" height="83"/>
+                                        <rect key="frame" x="0.0" y="69" width="121" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -441,7 +441,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-7x-Vz1">
-                                        <rect key="frame" x="0.0" y="185" width="227" height="86"/>
+                                        <rect key="frame" x="0.0" y="138" width="164" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -449,7 +449,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-hv-axf">
-                                        <rect key="frame" x="0.0" y="281" width="167" height="87"/>
+                                        <rect key="frame" x="0.0" y="207" width="105" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                         <connections>
@@ -457,7 +457,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-Ut-7Qn">
-                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
+                                        <rect key="frame" x="0.0" y="276" width="147" height="59"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -705,7 +705,13 @@
                         <barButtonItem key="leftBarButtonItem" image="close" id="ct8-Uq-3Xm">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="0X7-fv-tD3" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="Tgt-cJ-ONT"/>
+                                <segue destination="0X7-fv-tD3" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="Tgt-cJ-ONT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="save" id="NXz-CE-MQM">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonTappedWithSender:" destination="xkN-98-a4l" id="a61-oS-wVh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -771,5 +777,6 @@
         <image name="photo" width="24" height="18"/>
         <image name="plus" width="16" height="16"/>
         <image name="sad" width="78" height="87"/>
+        <image name="save" width="20" height="20"/>
     </resources>
 </document>

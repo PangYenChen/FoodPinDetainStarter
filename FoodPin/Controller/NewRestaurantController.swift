@@ -60,6 +60,60 @@ class NewRestaurantController: UITableViewController {
         }
     }
     
+    //MARK: Action Method
+    @IBAction func saveButtonTapped(sender: UIBarButtonItem) {
+        guard let name = nameTextField.text, name != "" else {
+            let alertController = UIAlertController(title: "資訊不足", message: "Name欄位必填", preferredStyle: .alert)
+            let OKaction = UIAlertAction(title: "知道了", style: .cancel, handler: nil)
+            alertController.addAction(OKaction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let type = typeTextField.text , type != "" else {
+            let alertController = UIAlertController(title: "資訊不足", message: "Type欄位必填", preferredStyle: .alert)
+            let OKaction = UIAlertAction(title: "知道了", style: .cancel, handler: nil)
+            alertController.addAction(OKaction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let phone = phoneTextField.text, phone != "" else {
+            let alertController = UIAlertController(title: "資訊不足", message: "Phone欄位必填", preferredStyle: .alert)
+            let OKaction = UIAlertAction(title: "知道了", style: .cancel, handler: nil)
+            alertController.addAction(OKaction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let location = addressTextField.text, location != "" else {
+            let alertController = UIAlertController(title: "資訊不足", message: "Address欄位必填", preferredStyle: .alert)
+            let OKaction = UIAlertAction(title: "知道了", style: .cancel, handler: nil)
+            alertController.addAction(OKaction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let description = descriptionTextView.text, description != "" else {
+            let alertController = UIAlertController(title: "資訊不足", message: "Description欄位必填", preferredStyle: .alert)
+            let OKaction = UIAlertAction(title: "知道了", style: .cancel, handler: nil)
+            alertController.addAction(OKaction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        print("Name: \(name)")
+        print("Type: \(type)")
+        print("Location: \(location)")
+        print("Phone: \(phone)")
+        print("Description: \(description)")
+        
+//        performSegue(withIdentifier: "unwindToHome", sender: self)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     //MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row == 0 else {
