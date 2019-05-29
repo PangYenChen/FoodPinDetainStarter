@@ -415,17 +415,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh2-bl-Cs6">
-                                <rect key="frame" x="382" y="44" width="16" height="22"/>
+                                <rect key="frame" x="365" y="44" width="33" height="32"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
                                     <segue destination="O3D-AB-czp" kind="unwind" unwindAction="closeWithSegue:" id="jCp-CM-vpe"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-dy-r8o">
-                                <rect key="frame" x="125" y="280.5" width="164" height="335"/>
+                                <rect key="frame" x="93.5" y="207.5" width="227" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-Rw-Wqe">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -433,7 +433,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-En-dtA">
-                                        <rect key="frame" x="0.0" y="69" width="121" height="59"/>
+                                        <rect key="frame" x="0.0" y="92" width="181" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -441,7 +441,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-7x-Vz1">
-                                        <rect key="frame" x="0.0" y="138" width="164" height="59"/>
+                                        <rect key="frame" x="0.0" y="185" width="227" height="86"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -449,7 +449,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me9-hv-axf">
-                                        <rect key="frame" x="0.0" y="207" width="105" height="59"/>
+                                        <rect key="frame" x="0.0" y="281" width="167" height="87"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                         <connections>
@@ -457,7 +457,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-Ut-7Qn">
-                                        <rect key="frame" x="0.0" y="276" width="147" height="59"/>
+                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -499,7 +499,7 @@
         <scene sceneID="EGn-Ol-4mP">
             <objects>
                 <tableViewController id="xkN-98-a4l" customClass="NewRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="05d-AU-kOI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="05d-AU-kOI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -510,7 +510,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdG-eT-Nhn" id="Gf9-ex-cpZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-Hw-ybG">
@@ -528,7 +528,7 @@
                                         <rect key="frame" x="0.0" y="200" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ufj-Fo-CeS" id="2UA-5T-xJl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-3k-oLy">
@@ -542,6 +542,7 @@
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in the restaurnat name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-x5-yaW" customClass="RoundTextField" customModule="FoodPin" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25.5" width="370" height="39.5"/>
+                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -561,7 +562,7 @@
                                         <rect key="frame" x="0.0" y="288" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="47H-Ns-cbM" id="68J-rg-fxD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qyu-bc-GUC">
@@ -575,6 +576,7 @@
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in the restaurnat type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-Nd-mTm" customClass="RoundTextField" customModule="FoodPin" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25.5" width="370" height="39.5"/>
+                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -594,7 +596,7 @@
                                         <rect key="frame" x="0.0" y="376" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nub-9l-1yK" id="98M-md-vak">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Nyx-1e-kcB">
@@ -608,6 +610,7 @@
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in the restaurnat address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42J-GP-19a" customClass="RoundTextField" customModule="FoodPin" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25.5" width="370" height="39.5"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -627,7 +630,7 @@
                                         <rect key="frame" x="0.0" y="464" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v2w-An-Xit" id="wE6-0T-QGn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c5I-MY-Kwe">
@@ -641,6 +644,7 @@
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fill in the restaurnat phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCF-4h-IkX" customClass="RoundTextField" customModule="FoodPin" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25.5" width="370" height="39.5"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -660,7 +664,7 @@
                                         <rect key="frame" x="0.0" y="552" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UWg-1x-NRE" id="Ecb-TL-WCj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="79f-z9-Dfk">
@@ -710,6 +714,7 @@
                         <outlet property="descriptionTextView" destination="LHi-2w-akV" id="x8G-To-HMF"/>
                         <outlet property="nameTextField" destination="GWP-x5-yaW" id="6Ru-dc-Vkt"/>
                         <outlet property="phoneTextField" destination="nCF-4h-IkX" id="jrY-x7-Qvh"/>
+                        <outlet property="photoImageView" destination="eHV-Hw-ybG" id="b4j-CB-sKM"/>
                         <outlet property="typeTextField" destination="ggM-Nd-mTm" id="hnU-Xl-BIY"/>
                     </connections>
                 </tableViewController>
