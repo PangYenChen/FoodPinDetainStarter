@@ -12,7 +12,7 @@ import MapKit
 class MapViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
-    var restaurant = Restaurant()
+    var restaurant: RestaurantMO!
     
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
         
         //地址轉換成座標後 標記在地圖上
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location) { (placemarks, error) in
+        geoCoder.geocodeAddressString(restaurant.location ?? "") { (placemarks, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return

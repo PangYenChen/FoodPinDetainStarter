@@ -11,14 +11,16 @@ import UIKit
 class ReviewViewController: UIViewController {
 
     @IBOutlet var backgroundImageView: UIImageView!
-    var restaurant = Restaurant()
+    var restaurant: RestaurantMO!
     
     @IBOutlet var rateButtons: [UIButton]!
     
     @IBOutlet weak var closeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundImageView.image = UIImage(named: restaurant.image)
+        if let restaurantImage = restaurant.image {
+            backgroundImageView.image = UIImage(data: restaurantImage)
+        }
         
         //套用模糊效果
         let blurEffect = UIBlurEffect(style: .dark)

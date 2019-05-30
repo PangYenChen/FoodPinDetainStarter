@@ -12,15 +12,16 @@ class RestaurantDetailViewController: UIViewController {
     
     @IBOutlet var headerView: RestaurantDetailHeaderView!
     @IBOutlet var tableView: UITableView!
-    var restaurant = Restaurant()
+    var restaurant: RestaurantMO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.largeTitleDisplayMode = .never
 
-
-        headerView.headerImageView.image = UIImage(named: restaurant.image)
+        if let restaurantImage = restaurant.image {
+            headerView.headerImageView.image = UIImage(data: restaurantImage as Data)
+        }
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = !restaurant.isVisited
@@ -133,7 +134,9 @@ extension RestaurantDetailViewController: UITableViewDataSource {
             let identifier = String(describing: RestaurantDetailMapCell.self)
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailMapCell
             cell.selectionStyle = .none
-            cell.configure(location: restaurant.location)
+            if let location = restaurant.location {
+                cell.configure(location: location)
+            }
             
             return cell
             
