@@ -14,6 +14,8 @@ class RestaurantTableViewController: UITableViewController {
     var restaurants:[RestaurantMO] = []
 
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+
+    var searchController: UISearchController!
     
     @IBOutlet var emptyRestaurantView: UIView!
     
@@ -54,6 +56,10 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
         
+        //加上搜尋列
+        
+        searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.searchController = searchController
     }
 
     override func viewWillAppear(_ animated: Bool) {
