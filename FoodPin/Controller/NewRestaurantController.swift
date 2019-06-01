@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController {
+
+    var restaurant: RestaurantMO!
     
     @IBOutlet var photoImageView: UIImageView!
     
@@ -107,6 +110,27 @@ class NewRestaurantController: UITableViewController {
         print("Location: \(location)")
         print("Phone: \(phone)")
         print("Description: \(description)")
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+            restaurant.name = name
+            restaurant.type = type
+            restaurant.location = location
+            restaurant.phone = phone
+            restaurant.summary = description
+            restaurant.isVisited = false
+            
+            if let restaurantImage = photoImageView.image {
+                restaurant.image = restaurantImage.pngData()
+            }
+            
+            print("Saving data to context")
+            appDelegate.saveContext()
+        }
+        
+        
+        
+        
         
 //        performSegue(withIdentifier: "unwindToHome", sender: self)
         dismiss(animated: true, completion: nil)

@@ -25,6 +25,9 @@ class RestaurantDetailViewController: UIViewController {
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = !restaurant.isVisited
+        if let rating = restaurant.rating {
+            headerView.ratingImageView.image = UIImage(named: rating)
+        }
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -74,6 +77,10 @@ class RestaurantDetailViewController: UIViewController {
                 self.restaurant.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating)
                 
+                if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                    appDelegate.saveContext()
+                }
+                
                 let scaleTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 self.headerView.ratingImageView.transform = scaleTransform
                 self.headerView.ratingImageView.alpha = 0
@@ -117,7 +124,7 @@ extension RestaurantDetailViewController: UITableViewDataSource {
         case 2:
             let identifier = String(describing: RestaurantDetailTextCell.self)
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RestaurantDetailTextCell
-            cell.descriptionLabel.text = restaurant.description
+            cell.descriptionLabel.text = restaurant.summary
             cell.selectionStyle = .none
             
             return cell
